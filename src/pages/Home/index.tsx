@@ -1,9 +1,10 @@
 import { HomeText } from './styles';
+import { Button } from '../../components';
 
 export const Home = () => {
   return (
     <div>
-      <HomeText>Test</HomeText>
+      <Button onClick={() => console.log('clicked!')}>Send</Button>
     </div>
   );
 };
