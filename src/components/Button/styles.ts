@@ -8,5 +8,10 @@ export const Container = styled.button`
     color: ${theme.white};
     border: 0;
     border-radius: 5px;
+    cursor: pointer;
+    &:focus {
+      outline: 0;
+      box-shadow: 0 0 0 2px ${props => props.theme['green-500']};
+    }
   `}
 `;

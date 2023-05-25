@@ -1,14 +1,25 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Home, Restaurant } from '../pages';
+import { Home, Restaurant, Schedules } from '../pages';
+import { AppLayout } from '../styles/layout';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />
-  },
-  {
-    path: '/resturants',
-    element: <Restaurant />
+    element: <AppLayout />,
+    children: [
+      {
+        path: '',
+        element: <Home />
+      },
+      {
+        path: 'restaurants/:restaurantId?',
+        element: <Restaurant />
+      },
+      {
+        path: 'schedules/:restaurantId',
+        element: <Schedules />
+      }
+    ]
   }
 ]);
 
