@@ -12,7 +12,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: 'restaurants/:restaurantId',
+        path: 'restaurants/:restaurantId?',
         element: <Restaurant />
       },
       {

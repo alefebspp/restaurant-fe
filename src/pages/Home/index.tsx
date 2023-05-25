@@ -50,7 +50,9 @@ export const Home = () => {
                 <IconButton>
                   <TrashIcon />
                 </IconButton>
-                <IconButton>
+                <IconButton
+                  onClick={() => navigate(`restaurants/${restaurant.id}`)}
+                >
                   <NotePencilIcon />
                 </IconButton>
               </ActionsContainer>

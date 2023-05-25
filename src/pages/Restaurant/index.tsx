@@ -10,8 +10,11 @@ import { Input, Button } from '../../components';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { createRestaurantSchemema } from '../../utils/schemas';
+import { useParams } from 'react-router-dom';
 
 export const Restaurant = () => {
+  const { restaurantId } = useParams();
+
   const {
     register,
     handleSubmit,
@@ -19,6 +22,8 @@ export const Restaurant = () => {
   } = useForm({
     resolver: yupResolver(createRestaurantSchemema)
   });
+
+  console.log('RESTAURANT ID:', restaurantId);
 
   return (
     <Container>

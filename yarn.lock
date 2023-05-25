@@ -1790,6 +1790,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@phosphor-icons/react@npm:^2.0.9":
+  version: 2.0.9
+  resolution: "@phosphor-icons/react@npm:2.0.9"
+  peerDependencies:
+    react: ">= 16.8"
+    react-dom: ">= 16.8"
+  checksum: 58d50b01bfeb6a3a4ac43adfb434654122afea416719c124e4df0e048a46b651137fc15ebaf6c3bb49a127f49b2fa7c7ce38219eed4cae65a672e64f3bb11434
+  languageName: node
+  linkType: hard
+
 "@remix-run/router@npm:1.6.2":
   version: 1.6.2
   resolution: "@remix-run/router@npm:1.6.2"
@@ -4073,6 +4083,7 @@ __metadata:
   resolution: "restaurant-project-fe@workspace:."
   dependencies:
     "@hookform/resolvers": ^3.1.0
+    "@phosphor-icons/react": ^2.0.9
     "@types/react": ^18.0.28
     "@types/react-dom": ^18.0.11
     "@types/styled-components": ^5.1.26
