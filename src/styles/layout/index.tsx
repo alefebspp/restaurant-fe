@@ -8,10 +8,12 @@ import {
   HeaderLinksSection,
   HeaderSection
 } from './styles';
-import { Outlet, useNavigate } from 'react-router-dom';
+import { Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 export const AppLayout = () => {
   const navigate = useNavigate();
+
+  const { pathname } = useLocation();
 
   return (
     <Container>
@@ -21,9 +23,14 @@ export const AppLayout = () => {
           <HeaderIcon />
         </HeaderSection>
         <HeaderLinksSection>
-          <HeaderLink onClick={() => navigate('')}>Home</HeaderLink>
-          <HeaderLink onClick={() => navigate('restaurants')}>
-            Add restaurant
+          <HeaderLink active={pathname == '/'} onClick={() => navigate('')}>
+            Home
+          </HeaderLink>
+          <HeaderLink
+            active={pathname == '/restaurants'}
+            onClick={() => navigate('restaurants')}
+          >
+            Register
           </HeaderLink>
         </HeaderLinksSection>
       </Header>

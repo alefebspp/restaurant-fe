@@ -9,6 +9,9 @@ export const Container = styled.button`
     border: 0;
     border-radius: 5px;
     cursor: pointer;
+    &:hover {
+      background-color: ${theme['green-500']};
+    }
     &:focus {
       outline: 0;
       box-shadow: 0 0 0 2px ${props => props.theme['green-500']};

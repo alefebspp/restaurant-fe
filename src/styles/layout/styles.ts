@@ -1,6 +1,10 @@
 import styled from 'styled-components';
 import { Storefront } from '@phosphor-icons/react';
 
+interface HeaderLinkProps {
+  active: boolean;
+}
+
 export const Container = styled.div`
   width: 100%;
   height: 100vh;
@@ -29,10 +33,11 @@ export const HeaderText = styled.h1`
   font-weight: 700;
 `;
 
-export const HeaderLink = styled.p`
+export const HeaderLink = styled.p<HeaderLinkProps>`
   cursor: pointer;
   font-size: 20px;
-  color: ${({ theme }) => theme['green-700']};
+  color: ${({ theme, active }) =>
+    active ? theme['gray-900'] : theme['green-300']};
   &:hover {
     color: ${({ theme }) => theme['green-500']};
   }
@@ -46,8 +51,6 @@ export const HeaderLinksSection = styled.div`
 `;
 
 export const HeaderSection = styled.div`
-  /* width: 40%;
-  height: 100%; */
   padding-left: 30px;
   display: flex;
   justify-content: center;
