@@ -114,6 +114,7 @@ export const Restaurant = () => {
         </InputContainer>
         <InputContainer>
           <Input
+            type="number"
             register={register}
             inputName="cnpj"
             inputLabel="CNPJ"

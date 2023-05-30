@@ -32,6 +32,12 @@ export const AppLayout = () => {
           >
             Register
           </HeaderLink>
+          <HeaderLink
+            active={pathname == '/check-schedules'}
+            onClick={() => navigate('check-schedules')}
+          >
+            Schedules
+          </HeaderLink>
         </HeaderLinksSection>
       </Header>
       <ContentContainer>

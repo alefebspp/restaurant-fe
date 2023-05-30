@@ -55,7 +55,7 @@ export const Home = () => {
           restaurants?.map(restaurant => {
             return (
               <RestaurantContainer key={restaurant.id}>
-                <RestaurantTitle>{restaurant.name}</RestaurantTitle>
+                <RestaurantTitle>{`${restaurant.name} - ${restaurant.segment}`}</RestaurantTitle>
                 <ActionsContainer>
                   <IconButton
                     onClick={() => navigate(`schedules/${restaurant.id}`)}

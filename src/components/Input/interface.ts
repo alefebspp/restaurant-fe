@@ -6,4 +6,5 @@ export interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   width?: string;
   inputLabel: string;
   inputName: string;
+  inputType?: string;
 }

@@ -47,7 +47,7 @@ export const RestaurantContainer = styled.div`
 
 export const RestaurantTitle = styled.p`
   color: ${({ theme }) => theme['gray-900']};
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 300;
 `;
 
@@ -73,13 +73,13 @@ export const IconButton = styled.button`
 `;
 
 export const ClockIcon = styled(Clock).attrs(({ theme }) => ({
-  size: 36
+  size: 26
 }))``;
 
 export const TrashIcon = styled(Trash).attrs(({ theme }) => ({
-  size: 36
+  size: 26
 }))``;
 
 export const NotePencilIcon = styled(NotePencil).attrs(({ theme }) => ({
-  size: 36
+  size: 26
 }))``;

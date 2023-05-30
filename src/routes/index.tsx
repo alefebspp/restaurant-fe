@@ -1,5 +1,5 @@
 import { createBrowserRouter } from 'react-router-dom';
-import { Home, Restaurant, Schedules } from '../pages';
+import { CheckSchedule, Home, Restaurant, Schedules } from '../pages';
 import { AppLayout } from '../styles/layout';
 
 const router = createBrowserRouter([
@@ -18,6 +18,10 @@ const router = createBrowserRouter([
       {
         path: 'schedules/:restaurantId',
         element: <Schedules />
+      },
+      {
+        path: 'check-schedules',
+        element: <CheckSchedule />
       }
     ]
   }
